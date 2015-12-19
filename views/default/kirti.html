@@ -1,0 +1,69 @@
+{{extend 'layout.html'}}
+
+
+<h2 align="center">
+  <u>Comment Section:</u>
+</h2>
+<br>
+<br>
+<table id="stats">
+    <tr>
+        <th>
+            Time:
+        </th>
+        <th>
+            Posted By:
+        </th>
+        <th>
+            Query
+        </th>
+        </tr>
+    {{for row in rows:}}
+    <tr>
+        <td>
+            {{=row.created_on}}
+        </td>
+        <td>
+            {{=row.created_by.first_name}} {{=row.created_by.last_name}}
+        </td>
+        <td>
+            {{=row.comments}}
+        </td>
+    </tr>
+    {{pass}}
+</table>
+
+{{=form}}
+<style>
+    td,th
+{
+  font-weight:bold;
+    color:blackblack;
+}
+#stats
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+#stats td, #stats th
+{
+  font-size: 17px;
+  border: 2px solid #981111;
+  padding: 3px 7px 2px 7px;
+}
+
+#stats th {
+  font-size: 15px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #A7C944;
+  color: black;
+}
+
+#stats tr.alt td {
+  color: #000000;
+  background-color: #FFF;
+}
+</style>

@@ -1,0 +1,118 @@
+{{extend 'layout.html'}}
+{{score=0}}
+    <h5>
+        Q1.Who is prime Minister of India?
+        </h5>
+        <h5>
+        A.Narendra Modi
+        </h5>
+        <h5>
+        B.Madhur Modi
+        </h5>
+        <h5>
+        C.Vatsal Shah      
+        </h5>
+      <h5>
+        D.Archit Rai
+        </h5>
+
+    {{=form}}
+{{if form.accepted:}}
+{{redirect(URL('iq1#z'))}}
+{{pass}}
+
+<a name="z"></a>
+
+       <h5>
+        Q2.The spherical shape of a drop is due to
+        </h5>
+        <h5>
+        A.Friction
+        </h5>
+        <h5>
+        B.Total internal reflection
+        </h5>
+        <h5>
+        C.Surface Tension
+        </h5>
+      <h5>
+        D.Resistivity
+        </h5>
+
+    {{=form1b}}
+{{if form1b.accepted:}}
+{{redirect(URL('iq1#b'))}}
+{{pass}}
+
+
+<a name="b"></a>
+ <h5>
+        Q3. Earth is protected from Ultra voilet radiation by
+        </h5>
+        <h5>
+        A.Infrared Rays
+        </h5>
+        <h5>
+        B.Ozone
+        </h5>
+        <h5>
+        C.Greenhouse effect
+        </h5>
+      <h5>
+        D.ALL of the Above
+        </h5>
+
+    {{=form1c}}
+{{if form1c.accepted:}}
+{{redirect(URL('iq1#c'))}}
+{{pass}}
+
+<a name="c"></a>
+ <h5>
+        Q4.Which number should come next in the series  1 -1 -2 -3 -5 -8 -13
+        </h5>
+        <h5>
+        A.8
+        </h5>
+        <h5>
+        B.30
+        </h5>
+        <h5>
+        C.21
+        </h5>
+      <h5>
+        D.27
+        </h5>
+
+    {{=form1d}}
+{{if form1d.accepted:}}
+{{redirect(URL('iq1#d'))}}
+{{pass}}
+
+
+<a name="d"></a>
+<h5>
+        Q5.Mary, who is sixteen years old, is four times as old as her brother. How old will Mary be when she is twice as old as her brother?
+        </h5>
+        <h5>
+        A.20
+        </h5>
+        <h5>
+        B.28
+        </h5>
+        <h5>
+        C.26
+        </h5>
+      <h5>
+        D.24
+        </h5>
+      
+    {{=form1e}}
+{{if form1e.accepted:}}
+{{redirect(URL('iq1#e'))}}
+{{pass}}
+
+<a name="e"></a>
+<center><form method="get" action="/onlineexam/default/marks">
+    <button type="submit">Finish</button>
+</form></center>

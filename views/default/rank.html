@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+<body background="https://s-media-cache-ak0.pinimg.com/originals/d4/5d/52/d45d52604ab4b262e0add13a226c8f75.jpg">
+    
+<img src="http://127.0.0.1:8000/onlineexam/static/evaluation-report-card-clipboard-assessment-grades-29536877.jpg" alt="Onlineexam" height='55%' width='35%' align="right"  />
+
+{{c=1}}
+
+<h2>
+    The Overall Rankings is:
+</h2>
+
+{{for row in rows:}}
+<h5>
+    {{=c}}. {{=row.first_name}} 
+</h5>
+{{c=c+1}}
+{{pass}}
+</body>
+<style>
+    body
+    {
+        background-size: cover;
+    }
+</style>

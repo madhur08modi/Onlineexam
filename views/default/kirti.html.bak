@@ -1,0 +1,36 @@
+{{extend 'layout.html'}}
+
+
+<h2 align="center">
+  <u>Comment Section:</u>
+</h2>
+<br>
+<br>
+<table id="stats">
+    <tr>
+        <th>
+            Time:
+        </th>
+        <th>
+            Posted By:
+        </th>
+        <th>
+            Query
+        </th>
+        </tr>
+    {{for row in rows:}}
+    <tr>
+        <td>
+            {{=row.created_on}}
+        </td>
+        <td>
+            {{=row.created_by.first_name}} {{=row.created_by.last_name}}
+        </td>
+        <td>
+            {{=row.comments}}
+        </td>
+    </tr>
+    {{pass}}
+</table>
+
+{{=form}}

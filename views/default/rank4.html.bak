@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+<body background="https://s-media-cache-ak0.pinimg.com/originals/d4/5d/52/d45d52604ab4b262e0add13a226c8f75.jpg">
+
+{{c=1}}
+
+<h2>
+    The Rankings of IQ Level_2 is:
+</h2>
+
+{{for row in rows:}}
+<h5>
+    {{=c}}. {{=row.first_name}} 
+</h5>
+{{c=c+1}}
+{{pass}}
+</body>
